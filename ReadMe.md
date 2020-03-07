@@ -44,10 +44,11 @@ npx eslint --init
 - [airbnb_extends](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
 - [vsCode_eslint_setting](https://github.com/microsoft/vscode-eslint)
 
-## Usage
+## prettier 🐰
 
 ```sh
-npm start
+npm i -D prettier 
+npm i -D eslint-config-prettier
 ```
 
 ## Run tests

@@ -9,7 +9,7 @@ module.exports = {
     commonjs: true,
     jest: true,
   },
-  extends: ["airbnb"],
+  extends: ['airbnb', 'eslint-config-prettier'],
   globals: {
     Atomics: "readonly",
     SharedArrayBuffer: "readonly",

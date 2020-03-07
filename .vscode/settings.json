@@ -4,5 +4,6 @@
   },
   "eslint.alwaysShowStatus": true,
   "eslint.workingDirectories": [{ "mode": "auto" }],
-  "eslint.lintTask.options": "./eslintrc.js"
+  "eslint.lintTask.options": "./eslintrc.js",
+  "prettier.requireConfig": true,
 }
