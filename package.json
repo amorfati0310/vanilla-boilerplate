@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint src --fix && prettier src --write"
+    "lint": "eslint --cache \"**/*.js\"",
+    "prettier": "prettier --config .prettierrc --write \"**/*.{js}\""
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,18 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^1.7.0",
     "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "^1.19.1"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "npm run prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }

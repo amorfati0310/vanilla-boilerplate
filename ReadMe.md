@@ -51,10 +51,16 @@ npm i -D prettier
 npm i -D eslint-config-prettier
 ```
 
-## Run tests
+```js
+// .eslintrc.js
+ extends: ['airbnb', 'eslint-config-prettier'],
+```
+
+## Husky & lint-staged 🐷
 
 ```sh
-npm test
+npm i -D husky
+npm i -D lint-staged
 ```
 
 ## Author
