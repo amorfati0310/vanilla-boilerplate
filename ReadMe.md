@@ -21,9 +21,9 @@ node version manager
 - prettier
 - lint-staged-husky
 - webpack
-  -- babel
-  -- scss
-  -- .env
+-- babel
+-- scss
+-- .env
 
 ### nvm ✨
 
@@ -63,7 +63,30 @@ npm i -D husky
 npm i -D lint-staged
 ```
 
-## Author
+```js
+"lint-staged": {
+    "*.js": [
+      "eslint --cache --fix",
+      "npm run prettier"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+```
+## webpack 🐵
+```
+npm i webpack webpack-cli -D
+```
+
+
+
+
+## Reference
+
+- [facebook_docusaurus](https://github.com/facebook/docusaurus)
+- [webpack](https://joshua1988.github.io/webpack-guide/webpack/what-is-webpack.html#%EC%9B%B9%ED%8C%A9%EC%9D%B4%EB%9E%80)
 
 ## Show your support
 
