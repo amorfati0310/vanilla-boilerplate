@@ -15,3 +15,4 @@ fbImageEL.setAttribute('src', facebook);
 document.body.appendChild(fbImageEL);
 
 console.log(sum, substract);
+console.log(process.env.NODE_ENV);
