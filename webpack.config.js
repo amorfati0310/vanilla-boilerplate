@@ -10,6 +10,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 const entryPath = path.join(__dirname, './src/app.js');
 const outputPath = path.resolve(__dirname, 'dist');
 const title = 'Vanila BoilerPlate';
+const mode = process.env.NODE_ENV || 'development';
 
 const banner = `
 *     Author: Black Coffe
@@ -24,6 +25,7 @@ const banner = `
 `;
 
 module.exports = {
+  mode,
   entry: {
     app: entryPath,
   },
