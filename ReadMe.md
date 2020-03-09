@@ -19,7 +19,7 @@ node version manager
 
 - [eslint](https://eslint.org/docs/user-guide/getting-started)
 - prettier
-- lint-staged-husky
+- lint-staged, husky
 - webpack
 -- babel
 -- scss
@@ -80,6 +80,9 @@ npm i -D lint-staged
 npm i webpack webpack-cli -D
 ```
 
+- babel 
+- scss 
+- build (merge, prod, dev)
 
 
 
@@ -87,6 +90,7 @@ npm i webpack webpack-cli -D
 
 - [facebook_docusaurus](https://github.com/facebook/docusaurus)
 - [webpack](https://joshua1988.github.io/webpack-guide/webpack/what-is-webpack.html#%EC%9B%B9%ED%8C%A9%EC%9D%B4%EB%9E%80)
+- [frontend-dev-jeonghwan-kim](https://github.com/jeonghwan-kim/lecture-frontend-dev-env)
 
 ## Show your support
 
