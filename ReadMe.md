@@ -55,6 +55,10 @@ npm i -D eslint-config-prettier
 // .eslintrc.js
  extends: ['airbnb', 'eslint-config-prettier'],
 ```
+### vsCode Extension 
+
+- [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 ## Husky & lint-staged 🐷
 
