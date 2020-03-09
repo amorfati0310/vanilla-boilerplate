@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
+
 const childProcess = require('child_process');
 // Is build option is development
 const isProduction = process.env.NODE_ENV === 'production';
@@ -19,9 +21,9 @@ const banner = `
 *     BuildDate: ${new Date().toLocaleString()}
 *     Hash: [hash]
 *     Chunkhash: [chunkhash]
-*     File: [file]  
+*     File: [file]
 *     Contributor: ${childProcess.execSync('git config user.name')}
-*     Commit: ${childProcess.execSync('git rev-parse --short HEAD  ')}   
+*     Commit: ${childProcess.execSync('git rev-parse --short HEAD  ')}
 `;
 
 module.exports = {
@@ -115,5 +117,18 @@ module.exports = {
       '@': 'src',
     },
     extensions: ['.js', '.json', '.jsx'],
+  },
+  optimization: {
+    minimizer: isProduction
+      ? [
+          new TerserPlugin({
+            terserOptions: {
+              compress: {
+                drop_console: true,
+              },
+            },
+          }),
+        ]
+      : [],
   },
 };
