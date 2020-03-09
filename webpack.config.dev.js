@@ -8,5 +8,6 @@ module.exports = merge(common, {
     overlay: true,
     stats: 'errors-only',
     contentBase: './dist',
+    hot: true,
   },
 });
