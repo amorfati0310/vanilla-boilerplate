@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const IS_DEV = process.env.NODE_ENV === 'dev';
 
 const entryPath = path.join(__dirname, './src/app.js');
-const outputPath = path.join(__dirname, 'dist');
+const outputPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
   entry: {
@@ -60,9 +60,10 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif)$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           name: '[path][name].[ext]?[hash]',
+          limit: 8192,
         },
       },
     ],
@@ -87,5 +88,11 @@ module.exports = {
   ],
   stats: {
     colors: true,
+  },
+  resolve: {
+    alias: {
+      '@': 'src',
+    },
+    extensions: ['.js', '.json', '.jsx'],
   },
 };
