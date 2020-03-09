@@ -59,7 +59,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(jpe?g|png|gif)$/,
+        test: /\.(jpe?g|png|gif|svg)$/,
         loader: 'url-loader',
         options: {
           name: '[path][name].[ext]?[hash]',
@@ -69,6 +69,17 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.BannerPlugin({
+      banner: `
+      *     Author: Black Coffe
+      *     Description: Vanila BoilerPlate
+      *     Source: https://github.com/amorfati0310/vanilla-boilerplate
+      *     BuildDate: ${new Date().toLocaleString()}
+      *     Hash: [hash]
+      *     Chunkhash: [chunkhash]
+      *     File: [file]    
+      `,
+    }),
     //   new webpack.DefinePlugin({
     //     IS_DEV,
     //   }),

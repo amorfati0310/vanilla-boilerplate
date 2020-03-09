@@ -21,6 +21,14 @@ node version manager
 - prettier
 - lint-staged, husky
 - webpack
+-- webpack 
+```js
+entry
+output 
+loader
+plugins
+
+```
 -- babel
 -- scss
 -- .env
