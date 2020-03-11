@@ -11,46 +11,47 @@
 
 > BoilerPlate
 
-### 필요한 것들은 ??? 🐱
 
-#### pre install nvm & vscode Extension  ✨
+# Vanila-BoilerPlate
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c38437f3-5dbb-4bf5-9a11-dac7c1a068b7/deploy-status)](https://app.netlify.com/sites/vanila-boilerplate/deploys)
+
+## ✨ pre install nvm & vscode Extension  
+
+### [nvm](https://github.com/nvm-sh/nvm)
 ```sh
 nvm install v12.16.1
 node version manager
-// 개발 당시 lts version
+// lts version (2020.3월 기준 )
 ```
-#### vsCode Extension 
+## 👐 vsCode Extension (Eslint Prettier) 
 
 - [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [nvm](https://github.com/nvm-sh/nvm)
+
+editor auto save를 활용하기 위해서 설치 <br> 
+그 밖의 유용한 plugin 공유 부탁드려요 :) 
 
 
+## 📦 Dependency
 
-#### dependencies
 - [eslint](https://eslint.org/docs/user-guide/getting-started)
 - prettier
-- lint-staged, husky
+- lint-staged
+- husky
+- babel 
+- sass
 - webpack
--- webpack 
-```js
-entry
-output 
-loader
-plugins
-
-```
--- babel
--- scss
--- .env
 
 
-###  install 
+## 🔧 Install 
 ```sh
+yarn add 
+// or
 npm install 
+
 ```
-#### scripts
+## 🌱 scripts
 ```js
   "lint": eslint lint 
  "format": prettier format
@@ -58,20 +59,19 @@ npm install
  "build": webpack production build  
 ```
 
-
-
-## Reference
+## 📝 Reference
 
 - [facebook_docusaurus](https://github.com/facebook/docusaurus)
 - [webpack](https://joshua1988.github.io/webpack-guide/webpack/what-is-webpack.html#%EC%9B%B9%ED%8C%A9%EC%9D%B4%EB%9E%80)
 - [frontend-dev-jeonghwan-kim](https://github.com/jeonghwan-kim/lecture-frontend-dev-env)
 
-## Git Branch Strategy
+## ❤️ Get Support 
 
-## Author
+Front-End 개발 환경 설정할 떄 tip / 개선사항 많은 피드 부탁드립니다 
 
-## Show your support
+## 🔥 Author
 
-## 📝 License
 
-This project is [MIT](MIT) licensed.
+## 💌 Contact
+
+* Email: lyhy0310@gmail.com
