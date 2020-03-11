@@ -13,10 +13,22 @@
 
 ### 필요한 것들은 ??? 🐱
 
-node version manager
+#### pre install nvm & vscode Extension  ✨
 
+```sh
+nvm install v12.16.1
+node version manager
+// 개발 당시 lts version
+```
+#### vsCode Extension 
+
+- [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [nvm](https://github.com/nvm-sh/nvm)
 
+
+
+#### dependencies
 - [eslint](https://eslint.org/docs/user-guide/getting-started)
 - prettier
 - lint-staged, husky
@@ -33,68 +45,18 @@ plugins
 -- scss
 -- .env
 
-### nvm ✨
 
+###  install 
 ```sh
-nvm install v12.16.1
+npm install 
 ```
-
-개발 당시 lts version
-
-## eslint 🐭
-
-```sh
-npm install eslint --save-dev
-npx eslint --init
-```
-
-- [airbnb_js_style_guide](https://github.com/airbnb/javascript)
-- [airbnb_extends](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
-- [vsCode_eslint_setting](https://github.com/microsoft/vscode-eslint)
-
-## prettier 🐰
-
-```sh
-npm i -D prettier 
-npm i -D eslint-config-prettier
-```
-
+#### scripts
 ```js
-// .eslintrc.js
- extends: ['airbnb', 'eslint-config-prettier'],
+  "lint": eslint lint 
+ "format": prettier format
+ "start": start localserver
+ "build": webpack production build  
 ```
-### vsCode Extension 
-
-- [eslint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-
-## Husky & lint-staged 🐷
-
-```sh
-npm i -D husky
-npm i -D lint-staged
-```
-
-```js
-"lint-staged": {
-    "*.js": [
-      "eslint --cache --fix",
-      "npm run prettier"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-```
-## webpack 🐵
-```
-npm i webpack webpack-cli -D
-```
-
-- babel 
-- scss 
-- build (merge, prod, dev)
 
 
 
@@ -103,6 +65,10 @@ npm i webpack webpack-cli -D
 - [facebook_docusaurus](https://github.com/facebook/docusaurus)
 - [webpack](https://joshua1988.github.io/webpack-guide/webpack/what-is-webpack.html#%EC%9B%B9%ED%8C%A9%EC%9D%B4%EB%9E%80)
 - [frontend-dev-jeonghwan-kim](https://github.com/jeonghwan-kim/lecture-frontend-dev-env)
+
+## Git Branch Strategy
+
+## Author
 
 ## Show your support
 
