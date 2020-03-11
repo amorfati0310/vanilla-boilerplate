@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
-const childProcess = require('child_process');
+// const childProcess = require('child_process');
 // Is build option is development
 const isProduction = process.env.NODE_ENV === 'production';
 
@@ -22,9 +22,12 @@ const banner = `
 *     Hash: [hash]
 *     Chunkhash: [chunkhash]
 *     File: [file]
-*     Contributor: ${childProcess.execSync('git config user.name')}
-*     Commit: ${childProcess.execSync('git rev-parse --short HEAD  ')}
+
 `;
+
+// netify git config error
+//*     Contributor: ${childProcess.execSync('git config user.name')}
+//*     Commit: ${childProcess.execSync('git rev-parse --short HEAD  ')}
 
 module.exports = {
   mode,
